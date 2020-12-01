@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>Coolor Tool</title>
+</head>
+
+<body>
+  <main class="container">
+    <h1 class="title">Color Tool</h1>
+    <!---input hex color start-->
+
+    <label for="hexInput">Hex Color</label>
+    <br>
+    <input type="text" id="hexInput" name="start-color" placeholder="#000000">
+    <br>
+
+    <label class="slider-label" for="slider">0%</label>
+    <br>
+    <input id="sliderColor" name="slider" type="range" min="0" max="100" value="0">
+
+
+    <!---colors box-->
+    <p>Input Color</p>
+    <div id="inputColor" class="box">
+      <!---Input color here-->
+    </div>
+    <p>Altered Color</p>
+    <div id="alteredColor" class="box">
+      <!---Alternative color here-->
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
