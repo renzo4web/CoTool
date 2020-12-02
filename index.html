@@ -13,7 +13,8 @@
 
     <label for="hexInput">Hex Color</label>
     <br>
-    <input type="text" id="hexInput" name="start-color" placeholder="#000000">
+
+    <input type="text" id="hexInput" name="start-color" placeholder="#000000" minlength="4" maxlength="7">
     <br>
 
     <label class="slider-label" for="slider">0%</label>
@@ -32,6 +33,8 @@
     </div>
   </main>
 
+  <script src="check-input.js"></script>
+  <script src="converter.js"></script>
   <script src="app.js"></script>
 </body>
 
