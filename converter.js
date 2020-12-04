@@ -9,7 +9,9 @@ const hexToRgb = (hex = "000000") => {
   let r, g, b;
   (hex.length > 4) ?
   (r = hex.slice(1, 3), g = hex.slice(3, 5), b = hex.slice(5, 7)) :
-  (r = hex.slice(1, 2).repeat(2), g = hex.slice(2, 3).repeat(2), b = hex.slice(3, 4).repeat(2));
+  (r = hex.slice(1, 2).repeat(2),
+    g = hex.slice(2, 3).repeat(2),
+    b = hex.slice(3, 4).repeat(2));
 
   r = parseInt(r, 16);
   g = parseInt(g, 16);
@@ -49,4 +51,4 @@ const rgbToHex = (r = 00, g = 00, b = 00) => {
   return "#" + result.join("");
 
 }
-hexToRgb();
+rgbToHex(0, 255, 255);

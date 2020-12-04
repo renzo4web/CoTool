@@ -23,8 +23,22 @@ const inputCheck = (hexInput) => {
   return false;
 }
 
-const hexInput = document.getElementById("hexInput");
+const rangePercern = document.getElementById("sliderColor");
 
+function sliderRange() {
+
+  rangePercern.addEventListener("input", function () {
+    const sliderText = document.querySelector(".slider-label");
+    const currentRange = rangePercern.value;
+    console.log(currentRange);
+    sliderText.textContent = `${currentRange}%`;
+    alter.style.backgroundColor = alterColor(("#" + hexInput.value), rangePercern.value);
+  });
+}
+sliderRange();
+
+const hexInput = document.getElementById("hexInput");
+const alter = document.getElementById("alteredColor");
 const inputColorBox = document.getElementById("inputColor");
 
 hexInput.addEventListener("keyup", () => {
@@ -34,6 +48,9 @@ hexInput.addEventListener("keyup", () => {
 
   (!inputCheck(hexValue)) ? console.log("Error"):
     inputColorBox.style.backgroundColor = "#" + hexStriped;
+  alter.style.backgroundColor = "#" + hexStriped;
   console.log(hexToRgb(("#" + hexStriped)))
+
+
 
 })

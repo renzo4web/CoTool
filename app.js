@@ -1,14 +1,17 @@
-/* eslint-disable no-undef */
-function sliderRange() {
-  const rangePercern = document.getElementById("sliderColor");
+//Create the alterColor function which accepts hex value and percentage
+//convert the hex value to rgb
+//increase each r,g,b value by appropriate amount (percentage of 255)
+//use the new r,g,b values to convert to a hex value
+//return the hex value
+const alterColor = (hex, percentage) => {
+  //amount (percentage / 100) * r || g || b;
+  const per = (percentage / 100);
+  const rgbToDarker = hexToRgb(hex);
+  const rgbAltered = []
+  for (const property in rgbToDarker) {
+    const color = rgbToDarker[property];
+    rgbAltered.push(Math.floor(color - (color * per)))
+  }
 
-  rangePercern.addEventListener("change", function () {
-    const sliderText = document.querySelector(".slider-label");
-    const currentRange = rangePercern.value;
-    console.log(currentRange);
-    sliderText.textContent = `% ${currentRange}`;
-  });
+  return rgbToHex(rgbAltered[0], rgbAltered[1], rgbAltered[2])
 }
-sliderRange();
-
-
