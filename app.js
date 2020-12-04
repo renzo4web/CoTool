@@ -5,13 +5,23 @@
 //return the hex value
 const alterColor = (hex, percentage) => {
   //amount (percentage / 100) * r || g || b;
-  const per = (percentage / 100);
+  const per = Math.floor(((percentage / 100) * 255));
   const rgbToDarker = hexToRgb(hex);
   const rgbAltered = []
   for (const property in rgbToDarker) {
     const color = rgbToDarker[property];
-    rgbAltered.push(Math.floor(color - (color * per)))
+    let colorResult = (Math.floor(color + per))
+    if (colorResult > 255) {
+      rgbAltered.push(255);
+    }
+    if (colorResult < 0) {
+
+      rgbAltered.push(0);
+    } else {
+      rgbAltered.push(colorResult);
+    }
   }
+
 
   return rgbToHex(rgbAltered[0], rgbAltered[1], rgbAltered[2])
 }

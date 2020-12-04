@@ -24,33 +24,43 @@ const inputCheck = (hexInput) => {
 }
 
 const rangePercern = document.getElementById("sliderColor");
+const hexInput = document.getElementById("hexInput");
+const alter = document.getElementById("alteredColor");
+const inputColorBox = document.getElementById("inputColor");
+const sliderText = document.querySelector(".slider-label");
+
+function reset() {
+  hexInput.addEventListener("click", function () {
+    rangePercern.value = 0;
+    sliderText.textContent = "0%";
+    inputColorBox.style.backgroundColor = "white";
+    alter.style.backgroundColor = "white";
+  })
+
+}
 
 function sliderRange() {
 
   rangePercern.addEventListener("input", function () {
-    const sliderText = document.querySelector(".slider-label");
     const currentRange = rangePercern.value;
     console.log(currentRange);
     sliderText.textContent = `${currentRange}%`;
-    alter.style.backgroundColor = alterColor(("#" + hexInput.value), rangePercern.value);
+    alter.style.backgroundColor = alterColor((inputCheck(hexInput.value)), rangePercern.value);
   });
 }
+
 sliderRange();
 
-const hexInput = document.getElementById("hexInput");
-const alter = document.getElementById("alteredColor");
-const inputColorBox = document.getElementById("inputColor");
+reset()
+
 
 hexInput.addEventListener("keyup", () => {
 
   const hexValue = hexInput.value;
-  const hexStriped = hexValue.replace("#", "");
-
+  let hexStriped = hexValue.replace("#", "");
   (!inputCheck(hexValue)) ? console.log("Error"):
     inputColorBox.style.backgroundColor = "#" + hexStriped;
   alter.style.backgroundColor = "#" + hexStriped;
   console.log(hexToRgb(("#" + hexStriped)))
-
-
 
 })
