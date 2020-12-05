@@ -28,6 +28,8 @@ const hexInput = document.getElementById("hexInput");
 const alter = document.getElementById("alteredColor");
 const inputColorBox = document.getElementById("inputColor");
 const sliderText = document.querySelector(".slider-label");
+const alterColorText = document.querySelector(".altercolor-text")
+
 
 function reset() {
   hexInput.addEventListener("click", function () {
@@ -35,17 +37,27 @@ function reset() {
     sliderText.textContent = "0%";
     inputColorBox.style.backgroundColor = "white";
     alter.style.backgroundColor = "white";
+    alterColorText.textContent = "Altered Color";
+    document.querySelector("#copy-hex").textContent = "Click To Copy"
   })
 
 }
+
+let colorAltered;
+
 
 function sliderRange() {
 
   rangePercern.addEventListener("input", function () {
     const currentRange = rangePercern.value;
+
     console.log(currentRange);
     sliderText.textContent = `${currentRange}%`;
-    alter.style.backgroundColor = alterColor((inputCheck(hexInput.value)), rangePercern.value);
+    colorAltered = alterColor((inputCheck(hexInput.value)), rangePercern.value);
+    alter.style.backgroundColor = colorAltered;
+    alterColorText.textContent = `Altered Color : ${colorAltered.toUpperCase()}`;
+
+
   });
 }
 
@@ -64,3 +76,10 @@ hexInput.addEventListener("keyup", () => {
   console.log(hexToRgb(("#" + hexStriped)))
 
 })
+
+document.querySelector("#copy-hex").addEventListener("click", copyText);
+
+function copyText() {
+  navigator.clipboard.writeText(colorAltered);
+  document.querySelector("#copy-hex").textContent = "COPIED"
+}

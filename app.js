@@ -22,6 +22,7 @@ const alterColor = (hex, percentage) => {
     }
   }
 
+  console.log(rgbAltered[0], rgbAltered[1], rgbAltered[2])
 
   return rgbToHex(rgbAltered[0], rgbAltered[1], rgbAltered[2])
 }
