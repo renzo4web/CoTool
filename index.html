@@ -2,15 +2,14 @@
 <html>
   <head>
     <link rel="stylesheet" href="style.css" />
-    <title>Coolor Tool</title>
+    <title>CoTool</title>
   </head>
 
   <body>
     <main class="container">
-      <h1 class="title">Color Tool</h1>
       <!---input hex color start-->
 
-      <label for="hexInput">Hex Color</label>
+      <label for="hexInput">🎨Hex Color🖌️</label>
       <br />
 
       <input
@@ -22,6 +21,17 @@
         maxlength="7"
       />
       <br />
+
+      <!-- Toggle btn-->
+      <div class="toggle">
+        <p id="ligthenText" class="toggle-text">Ligth</p>
+        <div id="toggleBtn" class="toggle-btn">
+          <div class="innerCircle">
+            <!---ROUND BUTTON-->
+          </div>
+        </div>
+        <p id="darkenText" class="toggle-text unselected">Dark</p>
+      </div>
 
       <label class="slider-label" for="slider">0%</label>
       <br />
@@ -42,14 +52,17 @@
       <p class="altercolor-text">
         Altered Color <input type="hidden" id="colorAlter" value="" />
       </p>
-      <button class="myButton" id="copy-hex">Click to copy Hex code</button>
       <div id="alteredColor" class="box">
         <!---Alternative color here-->
       </div>
+      <button class="myButton" id="copy-hex">Click to copy Hex code</button>
+
+      <footer>Made with Love by Renzo</footer>
     </main>
     <script src="check-input.js"></script>
     <script src="converter.js"></script>
-    <script src="slider.js"></script>
+
     <script src="app.js"></script>
+    <script src="./btn.js"></script>
   </body>
 </html>

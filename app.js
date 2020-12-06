@@ -11,10 +11,9 @@ const alterColor = (hex, percentage) => {
   for (const property in rgbToDarker) {
     const color = rgbToDarker[property];
     let colorResult = (Math.floor(color + per))
-    if (colorResult > 255) {
+    if (colorResult >= 255) {
       rgbAltered.push(255);
-    }
-    if (colorResult < 0) {
+    } else if (colorResult < 0) {
 
       rgbAltered.push(0);
     } else {
