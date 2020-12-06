@@ -13,7 +13,13 @@ body {
 }
 
 .container {
+  margin: 20px auto;
+  width: 600px;
+  height: 800px;
   padding: 0 10px;
+  border-radius: 20px;
+  border: solid 10px black;
+  text-align: center;
 }
 
 .title {
@@ -40,13 +46,12 @@ input[type="text"] {
 }
 
 .box {
-  margin-bottom: 10px;
+  margin: 10px auto;
   height: 100px;
   width: 300px;
   border-radius: 21px;
   background: linear-gradient(45deg, #f6f6f6, #cfcfcf);
-  box-shadow: 23px -23px 39px #aaaaaa,
-    -23px 23px 39px #ffffff;
+
 }
 
 p {
@@ -110,9 +115,10 @@ p {
 
 
 .toggle {
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+
 }
 
 .toggle-text {
@@ -154,13 +160,14 @@ p {
 
 
 footer {
-  margin-top: 60px;
+  margin-top: 50px;
   text-align: center;
-  width: 300px;
-  height: 30px;
-  background-color: #ccc;
-  border-radius: 5px;
-
+  width: 100%;
+  height: 35px;
+  border: solid 3px black;
+  background-color: #e6e6e6;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 
