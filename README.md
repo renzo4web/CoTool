@@ -25,12 +25,6 @@
 **I learned a little more about css and it gave me a lot of practice to work on the relation of inputs in html and its interaction with javascript. Also what cost me more was to make the switch button but it served me a lot.**
 
 
-## Authors
-
-👤 **Author**
-
-- GitHub: [@w3renzo](https://github.com/w3renzo)
-- Twitter: [@w3renzo](https://twitter.com/w3renzo)
 
 ## 🤝 Contributing
 
