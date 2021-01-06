@@ -17,7 +17,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://w3renzo.github.io/CoTool/)
+[Live Demo Link](https://renzobn.github.io/CoTool/)
 
 
 ## What I learned?
