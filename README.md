@@ -1,45 +1,33 @@
+# Webpack Frontend Starterkit
 
-# CoTool
+[![Dependabot badge](https://flat.badgen.net/dependabot/wbkd/webpack-starter?icon=dependabot)](https://dependabot.com/)
 
->Darken or lighten any color.
+A lightweight foundation for your next webpack based frontend project.
 
-![screenshot](https://i.imgur.com/SQkRxcX.png)
+### Installation
 
--Accepts Hex codes
--Dark or light color
--Button to copy resultant value
+```
+npm install
+```
 
-## Built With
+### Start Dev Server
 
-- Javascript Vanilla
-- CSS
-- HTML
+```
+npm start
+```
 
-## Live Demo
+### Build Prod Version
 
-[Live Demo Link](https://renzobn.github.io/CoTool/)
+```
+npm run build
+```
 
+### Features:
 
-## What I learned?
+- ES6 Support via [babel](https://babeljs.io/) (v7)
+- JavaScript Linting via [eslint-loader](https://github.com/MoOx/eslint-loader)
+- SASS Support via [sass-loader](https://github.com/jtangelder/sass-loader)
+- Autoprefixing of browserspecific CSS rules via [postcss](https://postcss.org/) and [autoprefixer](https://github.com/postcss/autoprefixer)
+- Style Linting via [stylelint](https://stylelint.io/)
 
-**I learned a little more about css and it gave me a lot of practice to work on the relation of inputs in html and its interaction with javascript. Also what cost me more was to make the switch button but it served me a lot.**
-
-
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](issues/).
-
-## Show your support
-
-Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Thanks to [James](https://twitter.com/jamesqquick) for the idea.
-
-## 📝 License
-
-This project is [MIT](lic.url) licensed.
+When you run `npm run build` we use the [mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin) to move the css to a separate file. The css file gets included in the head of the `index.html`.

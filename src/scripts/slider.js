@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-function sliderRange() {
+export function sliderRange() {
   const rangePercern = document.getElementById("sliderColor");
 
   rangePercern.addEventListener("input", function () {
@@ -9,4 +9,3 @@ function sliderRange() {
     sliderText.textContent = `${currentRange}%`;
   });
 }
-sliderRange();
